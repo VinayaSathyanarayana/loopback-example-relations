@@ -30,6 +30,10 @@
     "dataSource": "db",
     "public": true
   },
+  "customerstat": {
+    "dataSource": "db",
+    "public": true
+  },
   "Ngo": {
     "dataSource": "db",
     "public": true
@@ -79,6 +83,10 @@
     "public": false
   },
   "Order": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Order1": {
     "dataSource": "db",
     "public": true
   },
