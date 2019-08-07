@@ -14,6 +14,9 @@ module.exports = function(app) {
 				res.render('index', {customer: customer});
 			});
 	});
+	router.get('/prayer',function(req,res,next){
+		res.send('Jai kateel Durga Parameshwari');
+	});
 	router.get('/email', function(req, res, next) {
 		app.models.Customer.findOne({
 			where: {
