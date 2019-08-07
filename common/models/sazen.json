@@ -1,0 +1,59 @@
+{
+    "name": "Sazen",
+    "base": "PersistedModel",
+    "idInjection": true,
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "registeredemail": {
+            "type": "string"
+        },
+        "phone": {
+            "type": "string"
+        },
+        "image": {
+            "type": "string"
+        }
+    },
+    "validations": [],
+    "protected": [
+        "email"
+    ],
+    "relations": {
+        "address": {
+            "type": "embedsOne",
+            "model": "Address",
+            "property": "billingAddress",
+            "options": {
+                "validate": true,
+                "forceId": false
+            }
+        },
+        "emails": {
+            "type": "embedsMany",
+            "model": "EmailAddress",
+            "property": "emailList",
+            "options": {
+                "validate": true,
+                "forceId": false
+            }
+        },
+        "accounts": {
+            "type": "referencesMany",
+            "model": "Account",
+            "foreignKey": "accountIds",
+            "options": {
+                "validate": true,
+                "forceId": false
+            }
+        },
+        "orders": {
+            "type": "hasMany",
+            "model": "Order",
+            "foreignKey": ""
+        }
+    },
+    "acls": [],
+    "methods": {}
+}

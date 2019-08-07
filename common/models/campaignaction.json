@@ -1,0 +1,38 @@
+{
+    "name": "CampaignAction",
+    "base": "PersistedModel",
+    "idInjection": true,
+    "options": {
+      "validateUpsert": true
+    },
+    "properties": {
+      "actiontype": {
+        "type": "string"
+      },
+      "actionvalue": {
+        "type": "integer"
+      },
+      "date": {
+        "type": "date"
+      },
+      "description": {
+        "type": "string"
+      }
+    },
+    "validations": [],
+    "relations": {
+      "ngo": {
+        "type": "belongsTo",
+        "model": "Ngo",
+        "foreignKey": ""
+      },
+      "sazen": {
+        "type": "belongsTo",
+        "model": "Sazen",
+        "foreignKey": ""
+      }
+    },
+    "acls": [],
+    "methods": {}
+  }
+  

@@ -1,0 +1,37 @@
+{
+    "name": "Campaign",
+    "base": "PersistedModel",
+    "idInjection": true,
+    "options": {
+      "validateUpsert": true
+    },
+    "properties": {
+      "date": {
+        "type": "date"
+      },
+      "description": {
+        "type": "string"
+      }
+    },
+    "validations": [],
+    "relations": {
+      "ngo": {
+        "type": "belongsTo",
+        "model": "Ngo",
+        "foreignKey": ""
+      },
+      "campaignstat": {
+        "type": "hasOne",
+        "model": "CampaignStat",
+        "foreignKey": ""
+      },
+      "campaignactions": {
+        "type": "hasMany",
+        "model": "CampaignAction",
+        "foreignKey": ""
+      }
+    },
+    "acls": [],
+    "methods": {}
+  }
+  

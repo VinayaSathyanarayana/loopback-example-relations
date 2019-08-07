@@ -30,6 +30,26 @@
     "dataSource": "db",
     "public": true
   },
+  "Ngo": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Campaign": {
+    "dataSource": "db",
+    "public": true
+  },
+  "CampaignStat": {
+    "dataSource": "db",
+    "public": true
+  },
+  "CampaignAction": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Sazen": {
+    "dataSource": "db",
+    "public": true
+  },
   "Address": {
     "dataSource": "transient",
     "public": false

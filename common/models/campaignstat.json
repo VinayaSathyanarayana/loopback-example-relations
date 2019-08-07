@@ -1,0 +1,29 @@
+{
+    "name": "CampaignStat",
+    "base": "PersistedModel",
+    "idInjection": true,
+    "options": {
+        "validateUpsert": true
+    },
+    "properties": {
+        "likecount": {
+            "type": "integer"
+        },
+        "sharecount": {
+            "type": "integer"
+        },
+        "regcount": {
+            "type": "integer"
+        }
+    },
+    "validations": [],
+    "relations": {
+        "campaign": {
+            "type": "belongsTo",
+            "model": "Campaign",
+            "foreignKey": ""
+        }
+    },
+    "acls": [],
+    "methods": {}
+}
