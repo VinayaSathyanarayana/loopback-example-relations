@@ -6,13 +6,28 @@
         "validateUpsert": true
     },
     "properties": {
-        "likecount": {
+        "lifetimelikecount": {
             "type": "integer"
         },
-        "sharecount": {
+        "lifetimesharecount": {
             "type": "integer"
         },
-        "regcount": {
+        "lifetimeregcount": {
+            "type": "integer"
+        },
+        "lifetimedonationamount": {
+            "type": "integer"
+        },
+        "weeklikecount": {
+            "type": "integer"
+        },
+        "weeksharecount": {
+            "type": "integer"
+        },
+        "weekregcount": {
+            "type": "integer"
+        },
+        "weekdonationamount": {
             "type": "integer"
         }
     },
