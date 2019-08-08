@@ -1,37 +1,48 @@
 {
-    "name": "Campaign",
-    "base": "PersistedModel",
-    "idInjection": true,
-    "options": {
-      "validateUpsert": true
+  "name": "Campaign",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "date": {
+      "type": "date"
     },
-    "properties": {
-      "date": {
-        "type": "date"
-      },
-      "description": {
-        "type": "string"
-      }
+    "startdate": {
+      "type": "date"
     },
-    "validations": [],
-    "relations": {
-      "ngo": {
-        "type": "belongsTo",
-        "model": "Ngo",
-        "foreignKey": ""
-      },
-      "campaignstat": {
-        "type": "hasOne",
-        "model": "CampaignStat",
-        "foreignKey": ""
-      },
-      "campaignactions": {
-        "type": "hasMany",
-        "model": "CampaignAction",
-        "foreignKey": ""
-      }
+    "enddate": {
+      "type": "date"
     },
-    "acls": [],
-    "methods": {}
-  }
-  
+    "description": {
+      "type": "string"
+    },
+    "causes": {
+      "type": ["string"]
+    },
+    "location": {
+      "type": "GeoPoint"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "ngo": {
+      "type": "belongsTo",
+      "model": "Ngo",
+      "foreignKey": ""
+    },
+    "campaignstat": {
+      "type": "hasOne",
+      "model": "CampaignStat",
+      "foreignKey": ""
+    },
+    "campaignactions": {
+      "type": "hasMany",
+      "model": "CampaignAction",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

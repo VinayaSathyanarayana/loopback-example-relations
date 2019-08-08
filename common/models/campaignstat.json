@@ -7,28 +7,28 @@
     },
     "properties": {
         "lifetimelikecount": {
-            "type": "integer"
+            "type": "number"
         },
         "lifetimesharecount": {
-            "type": "integer"
+            "type": "number"
         },
         "lifetimeregcount": {
-            "type": "integer"
+            "type": "number"
         },
         "lifetimedonationamount": {
-            "type": "integer"
+            "type": "number"
         },
         "weeklikecount": {
-            "type": "integer"
+            "type": "number"
         },
         "weeksharecount": {
-            "type": "integer"
+            "type": "number"
         },
         "weekregcount": {
-            "type": "integer"
+            "type": "number"
         },
         "weekdonationamount": {
-            "type": "integer"
+            "type": "number"
         }
     },
     "validations": [],
