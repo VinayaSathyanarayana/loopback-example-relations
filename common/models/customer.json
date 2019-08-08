@@ -50,9 +50,9 @@
       "model": "Order",
       "foreignKey": ""
     },
-    "order1s": {
+    "keycount": {
       "type": "hasMany",
-      "model": "Order1",
+      "model": "Keycount",
       "foreignKey": ""
     }
 

@@ -1,0 +1,50 @@
+{
+    "name": "Keycount",
+    "base": "PersistedModel",
+    "idInjection": true,
+    "options": {
+        "validateUpsert": true
+    },
+    "properties": {
+        "date": {
+            "type": "date"
+        },
+        "description": {
+            "type": "string"
+        },
+        "lifetimelikecount": {
+            "type": "number"
+        },
+        "lifetimesharecount": {
+            "type": "number"
+        },
+        "lifetimeregcount": {
+            "type": "number"
+        },
+        "lifetimedonationamount": {
+            "type": "number"
+        },
+        "weeklikecount": {
+            "type": "number"
+        },
+        "weeksharecount": {
+            "type": "number"
+        },
+        "weekregcount": {
+            "type": "number"
+        },
+        "weekdonationamount": {
+            "type": "number"
+        }
+    },
+    "validations": [],
+    "relations": {
+        "customer": {
+            "type": "belongsTo",
+            "model": "Customer",
+            "foreignKey": ""
+        }
+    },
+    "acls": [],
+    "methods": {}
+}
