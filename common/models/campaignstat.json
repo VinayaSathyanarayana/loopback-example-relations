@@ -15,9 +15,6 @@
         "lifetimeregcount": {
             "type": "number"
         },
-        "lifetimedonationamount": {
-            "type": "number"
-        },
         "weeklikecount": {
             "type": "number"
         },
@@ -25,9 +22,6 @@
             "type": "number"
         },
         "weekregcount": {
-            "type": "number"
-        },
-        "weekdonationamount": {
             "type": "number"
         }
     },
@@ -37,6 +31,24 @@
             "type": "belongsTo",
             "model": "Campaign",
             "foreignKey": ""
+        },
+        "lifetimedonationamount" : {
+            "type": "embedsOne",
+            "model": "Amount",
+            "property": "lifetimedonationamount",
+            "options": {
+                "validate": true,
+                "forceId": false
+            }
+        },
+        "weekdonationamount": {
+            "type": "embedsOne",
+            "model": "Amount",
+            "property": "weekdonationamount",
+            "options": {
+                "validate": true,
+                "forceId": false
+            }
         }
     },
     "acls": [],

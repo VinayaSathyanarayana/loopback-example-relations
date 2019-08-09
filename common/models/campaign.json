@@ -1,48 +1,82 @@
 {
-  "name": "Campaign",
-  "base": "PersistedModel",
-  "idInjection": true,
-  "options": {
-    "validateUpsert": true
-  },
-  "properties": {
-    "date": {
-      "type": "date"
+    "name": "Campaign",
+    "base": "PersistedModel",
+    "idInjection": true,
+    "options": {
+        "validateUpsert": true
     },
-    "startdate": {
-      "type": "date"
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "tagline": {
+            "type": "string"
+        },
+        "description": {
+            "type": "string"
+        },
+        "campaigntype": {
+            "type": "string"
+        },
+        "date": {
+            "type": "date"
+        },
+        "startdate": {
+            "type": "date"
+        },
+        "enddate": {
+            "type": "date"
+        },
+        "causes": {
+            "type": [
+                "string"
+            ]
+        },
+        "location": {
+            "type": "GeoPoint"
+        }
     },
-    "enddate": {
-      "type": "date"
+    "validations": [],
+    "relations": {
+        "ngo": {
+            "type": "belongsTo",
+            "model": "Ngo",
+            "foreignKey": ""
+        },
+        "corporate": {
+            "type": "belongsTo",
+            "model": "Corporate",
+            "foreignKey": ""
+        },
+        "targetamount": {
+            "type": "embedsOne",
+            "model": "Amount",
+            "property": "targetamount",
+            "options": {
+                "validate": true,
+                "forceId": false
+            }
+        },
+        "coordinator": {
+            "type": "embedsOne",
+            "model": "Sazen",
+            "property": "coordinator",
+            "options": {
+                "validate": true,
+                "forceId": false
+            }
+        },
+        "campaignstat": {
+            "type": "hasOne",
+            "model": "CampaignStat",
+            "foreignKey": ""
+        },
+        "campaignactions": {
+            "type": "hasMany",
+            "model": "CampaignAction",
+            "foreignKey": ""
+        }
     },
-    "description": {
-      "type": "string"
-    },
-    "causes": {
-      "type": ["string"]
-    },
-    "location": {
-      "type": "GeoPoint"
-    }
-  },
-  "validations": [],
-  "relations": {
-    "ngo": {
-      "type": "belongsTo",
-      "model": "Ngo",
-      "foreignKey": ""
-    },
-    "campaignstat": {
-      "type": "hasOne",
-      "model": "CampaignStat",
-      "foreignKey": ""
-    },
-    "campaignactions": {
-      "type": "hasMany",
-      "model": "CampaignAction",
-      "foreignKey": ""
-    }
-  },
-  "acls": [],
-  "methods": {}
+    "acls": [],
+    "methods": {}
 }

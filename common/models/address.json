@@ -14,6 +14,9 @@
     },
     "zipCode": {
       "type": "string"
+    },
+    "country": {
+      "type": "string"
     }
   },
   "validations": [],

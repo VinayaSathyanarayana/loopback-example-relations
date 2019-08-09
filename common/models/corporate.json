@@ -1,5 +1,5 @@
 {
-    "name": "Ngo",
+    "name": "Corporate",
     "base": "PersistedModel",
     "idInjection": true,
     "properties": {
