@@ -42,6 +42,10 @@
         "dataSource": "db",
         "public": true
     },
+    "empanelmentapplication": {
+        "dataSource": "db",
+        "public": true
+    },
     "Campaign": {
         "dataSource": "db",
         "public": true

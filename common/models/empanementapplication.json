@@ -1,0 +1,48 @@
+{
+    "name": "empanelmentapplication",
+    "base": "PersistedModel",
+    "idInjection": true,
+    "options": {
+        "validateUpsert": true
+    },
+    "properties": {
+        "ngomessage": {
+            "type": "string"
+        },
+        "csrmessage": {
+            "type": "string"
+        },
+        "empanelmentformid": {
+            "type": "number"
+        },
+        "empanelmentdocids": {
+            "type": [
+                "number"
+            ]
+        },
+        "status": {
+            "type": "string"
+        },
+        "startdate": {
+            "type": "date"
+        },
+        "enddate": {
+            "type": "date"
+        }
+    },
+    "validations": [],
+    "relations": {
+        "ngo": {
+            "type": "belongsTo",
+            "model": "Ngo",
+            "foreignKey": ""
+        },
+        "corporate": {
+            "type": "belongsTo",
+            "model": "Corporate",
+            "foreignKey": ""
+        }
+    },
+    "acls": [],
+    "methods": {}
+}
