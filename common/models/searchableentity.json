@@ -1,0 +1,65 @@
+{
+    "name": "searchableentity",
+    "base": "PersistedModel",
+    "idInjection": true,
+    "properties": {
+        "sgobjecttype": {
+            "type": "string"
+        },
+        "sgsubobjecttype": {
+            "type": "string"
+        },
+        "sgObjectId" : {
+            "type": "string"
+        },
+        "name": {
+            "type": "string"
+        },
+        "tagline": {
+            "type": "string"
+        },
+        "starttimestamp": {
+            "type": "DateString"
+        },
+        "endtimestamp": {
+            "type": "DateString"
+        },
+        "location": {
+            "type": "GeoPoint"
+        },
+        "causes": {
+            "type": [
+                "string"
+            ]
+        },
+        "sdgs": {
+            "type": [
+                "string"
+            ]
+        },
+        "permaUrl": {
+            "type": "string"
+        },
+        "extUrl": {
+            "type": "string"
+        },
+        "oembedUrl": {
+            "type": "string"
+        }
+    },
+    "validations": [],
+    "protected": [],
+    "relations": {
+        "address": {
+            "type": "embedsOne",
+            "model": "Address",
+            "property": "Address",
+            "options": {
+                "validate": true,
+                "forceId": false
+            }
+        }
+    },
+    "acls": [],
+    "methods": {}
+}

@@ -38,6 +38,10 @@
         "dataSource": "db",
         "public": true
     },
+    "searchableentity": {
+        "dataSource": "db",
+        "public": true
+    },
     "Corporate": {
         "dataSource": "db",
         "public": true

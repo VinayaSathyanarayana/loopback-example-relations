@@ -1,5 +1,11 @@
 {
   "loopback-component-explorer": {
     "mountPath": "/explorer"
+  },
+  "loopback-full-text-search": {
+    "models": [{
+      "name": "searchableentity",
+      "fields": ["name", "tagline", "location", "causes", "sdgs", "permaUrl", "extUrl"]
+    }]
   }
 }
